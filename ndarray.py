@@ -1,0 +1,58 @@
+import numpy as np
+X = np.arange(start =1, stop = 101).reshape(10,10)
+X  = (X*X)
+Y = X%3
+i = 0
+Z = np.empty((1))
+
+while i !=9:
+    i = i+1
+    if Y[0,i]== 0:
+        Z = np.append(Z,X[0,i])
+i = 0
+while i !=9:
+    i = i+1
+    if Y[1,i]== 0:
+        Z = np.append(Z,X[1,i])    
+i = 0
+while i !=9:
+    i = i+1
+    if Y[2,i]== 0:
+        Z = np.append(Z,X[2,i])    
+i = 0
+while i !=9:
+    i = i+1
+    if Y[3,i]== 0:
+        Z = np.append(Z,X[3,i])    
+i = 0
+while i !=9:
+    i = i+1
+    if Y[4,i]== 0:
+        Z = np.append(Z,X[4,i])    
+i = 0
+while i !=9:
+    i = i+1
+    if Y[5,i]== 0:
+        Z = np.append(Z,X[5,i])    
+i = 0
+while i !=9:
+    i = i+1
+    if Y[6,i]== 0:
+        Z = np.append(Z,X[6,i])    
+i = 0
+while i !=9:
+    i = i+1
+    if Y[7,i]== 0:
+        Z = np.append(Z,X[7,i])    
+i = 0
+while i !=9:
+    i = i+1
+    if Y[8,i]== 0:
+        Z = np.append(Z,X[8,i])
+i = 0
+while i !=9:
+    i = i+1
+    if Y[9,i]== 0:
+        Z = np.append(Z,X[9,i])    
+DivBy3 = np.delete(Z,[0])
+np.save('div_by_3.npy', DivBy3)
